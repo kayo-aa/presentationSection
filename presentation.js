@@ -25,20 +25,6 @@ const setLayout = () => {
 
 setLayout()
 
-window.addEventListener("resize",() => {
-  if (window.innerWidth < 768) {
-    presentationImg.classList.add("order-first");
-    presentationImg.classList.remove("img-md-width");
-    presentationText.classList.remove("text-md-width");
-    presentationText.classList.add("order-last");
-    presentationRow.classList.remove("row-md-justify");
-
-  } else{
-      presentationImg.classList.remove("order-first");
-      presentationImg.classList.add("img-md-width");
-      presentationText.classList.remove("order-last");
-      presentationText.classList.add("text-md-width");
-      presentationRow.classList.add("row-md-justify");
-  }
-})
+window.addEventListener("resize",() => setLayout()
+)
 
